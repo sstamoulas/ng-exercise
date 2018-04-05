@@ -1,0 +1,15 @@
+
+<h1>List of Users</h1>
+<ol *ngIf="results">
+	<li *ngFor="let result of results; let i = index">
+		<div class="name">
+			<a [routerLink]="['/userdetail', i]">Name: {{ result.name.first }} {{ result.name.last }}</a>
+		</div>
+		<div class="email">
+			<a [routerLink]="['/userdetail', i]">Email: {{ result.email }}</a>
+		</div>
+		<div class="phone">
+			<a [routerLink]="['/userdetail', i]">Phone: {{ result.phone }}</a>
+		</div>
+	</li>
+</ol>

@@ -1,0 +1,18 @@
+<h1>User Details</h1>
+
+<div *ngIf="result">
+	<div>
+		<img src="{{ result.picture.medium }}" />
+	</div>
+	<div>
+		Name: {{ result.name.first }} {{ result.name.last }}
+	</div>
+	<div>
+		Email: {{ result.email }}
+	</div>
+	<div>
+		Phone: {{ result.phone }}
+	</div>
+</div>
+
+<button md-button class="back-btn" (click)="goBack()">BACK</button>
